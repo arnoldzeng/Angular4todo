@@ -4,9 +4,9 @@ import {Component} from '@angular/core';
 
 @Component({
     selector: 'app-root',
-    // templateUrl: './app.component.html',
-    // styleUrls: ['./app.component.css'],
-    template : '<hero-form></hero-form>'
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css'],
+    // template : '<hero-form></hero-form>'
 })
 export class AppComponent {
     title = 'app works!';

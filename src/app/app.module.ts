@@ -3,20 +3,27 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { RouterModule } from '@angular/router';
+import { CoreModule } from './services/core.module';
+
 import { AppComponent } from './app.component';
-// import { HeroFormComponent } from './hero-form.component';
-// import { LoginComponent } from './login/login.component';
+import { LoginModule } from './login/login.module';
+import { AppRoutingModule } from './app-routing.module';
+import { TodoModule } from './todo/todo.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    // HeroFormComponent,
-    // LoginComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    CoreModule,
+    RouterModule,
+    LoginModule,
+    AppRoutingModule,
+    TodoModule
   ],
   providers: [],
   bootstrap: [AppComponent]

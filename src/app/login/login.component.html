@@ -1,0 +1,29 @@
+<p>
+  login works!
+</p>
+<div>
+  <form #formRef="ngForm" (ngSubmit)="onSubmit(formRef.value)">
+    <fieldset ngModelGroup="login">
+      <input [(ngModel)]="username"
+             type="text"
+             minlength="3"
+             class="ng-touched ng-invalid ng-pristine"
+             #usernameRef="ngModel"
+             placeholder="请输入用户名"
+             required
+             name="username"
+      >
+      <div *ngIf="usernameRef.errors?.required">this is required</div>
+      <div *ngIf="usernameRef.errors?.minlength">should be at least 3</div>
+      <input type="password"
+             [(ngModel)]="password"
+             minlength="3"
+             required
+             name="password"
+             #passwordRef="ngModel"
+      >
+      <div *ngIf="passwordRef.errors?.required">this.is required</div>
+      <button type="submit">loign2</button>
+    </fieldset>
+  </form>
+</div>
