@@ -3,23 +3,28 @@
  */
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-// import { AuthGuardService } from './services/auth-guard.service';
-import { LoginComponent } from './login/login.component';
+import { AuthGuardService } from './services/auth-guard.service';
+import { PrimeComponent } from './prime/prime.component';
 
 const routes: Routes = [
     {
         path: '',
-        redirectTo: 'todo',
+        redirectTo: 'testmap',
         pathMatch: 'full'
     },
-    {
-        path: 'login',
-        component: LoginComponent
-    },
-    {
-        path: 'login',
-        redirectTo: 'todo'
-    }
+    // {
+    //     path: 'prime',
+    //     redirectTo: 'prime',
+    //     // pathMatch: 'full'
+    // },
+    // {
+    //     path: 'prime',
+    //     component: PrimeComponent
+    // },
+    // {
+    //     path: 'login',
+    //     redirectTo: 'todo/All'
+    // }
     // {
     //     path: 'login',
     //     // redirectTo: 'login',
@@ -30,11 +35,11 @@ const routes: Routes = [
     //     redirectTo: 'login',
     //     pathMatch: 'full'
     // },
-    // {
-        // path: 'todo',
-        // redirectTo: 'todo/ALL',
-        // canLoad: [AuthGuardService]
-    // }
+    {
+        path: 'todo',
+        redirectTo: 'todo/ALL',
+        canLoad: [AuthGuardService]
+    }
 ];
 
 @NgModule({

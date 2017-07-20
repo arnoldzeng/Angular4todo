@@ -3,13 +3,14 @@
  */
 import { ModuleWithProviders, NgModule, Optional, SkipSelf } from '@angular/core';
 import { AuthService } from './auth.service';
-// import { UserService } from './user.service';
+import { UserService } from './user.service';
 import { AuthGuardService } from './auth-guard.service';
+import { CommonModule} from '@angular/common';
 
 @NgModule({
     providers: [
         { provide: 'auth', useClass: AuthService },
-        // { provide: 'user', useClass: UserService },
+        { provide: 'user', useClass: UserService },
         AuthGuardService
     ]
 })
